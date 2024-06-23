@@ -35,8 +35,7 @@ final class ResultViewController: UIViewController {
 
     // MARK: - Private Methods
     private func calculateResults() {
-        let answersCount = answersChosen.reduce(into: [Animal: Int]()) {
-            counts, answer in
+        let answersCount = answersChosen.reduce(into: [Animal: Int]()) { counts, answer in
             counts[answer.animal, default: 0] += 1
         }
         
