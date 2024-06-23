@@ -39,6 +39,7 @@ final class ResultViewController: UIViewController {
             counts, answer in
             counts[answer.animal, default: 0] += 1
         }
+        
         if let answersResult = answersCount.max(by: { a, b in a.value < b.value }) {
             let resultAnimal = answersResult.key
             updateUI(with: resultAnimal)
