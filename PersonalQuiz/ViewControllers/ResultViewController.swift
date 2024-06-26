@@ -20,7 +20,11 @@ final class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
-        calculateResults()
+        
+        let time = ContinuousClock().measure {
+            calculateResults()
+        }
+        print(time)
     }
     
     // MARK: - Actions
